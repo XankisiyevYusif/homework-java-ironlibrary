@@ -67,7 +67,6 @@ class LibraryServiceTest {
         assertNotNull(issue);
         assertNotNull(issue.getReturnDate());
 
-        // Quantity should decrease
         Book book = bookRepo.findById(ISBN).orElseThrow();
         assertEquals(4, book.getQuantity());
     }
